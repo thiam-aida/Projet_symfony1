@@ -1,17 +1,236 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aida Thiam - Home</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color:rgb(255, 255, 255); /* Light pink background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+        .header {
+            background-color: rgb(30, 146, 134); /* Turquoise */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            padding: 40px;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info {
+            background-color: #f8f8ff; /* Very light background */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 2px solid rgb(30, 129, 119);
+        }
+
+        .profile-info h2 {
+            color: rgb(30, 105, 98); /* Turquoise */
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .profile-info p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 5px 0;
+        }
+
+        .presentation h2 {
+            color: rgb(30, 122, 113); /* Turquoise */
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .presentation p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .footer {
+            background-color: rgb(30, 129, 119); /* Turquoise */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .btn-custom {
+            background-color:rgb(30, 129, 129);
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section for images (Gallery) */
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px;
+            justify-content: center; /* Center the images */
+        }
+
+        .photo-item {
+            flex: 1 1 calc(33.33% - 15px);
+            max-width: calc(33.33% - 15px);
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            max-width: 300px; /* Max width of each image */
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-back {
+            background-color:rgb(37, 89, 102);
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-back:hover {
+            background-color:rgb(30, 137, 145);
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+            .photo-item {
+                flex: 1 1 calc(50% - 15px); /* On small screens, show two images per row */
+                max-width: calc(50% - 15px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="background-color:rgb(30, 148, 136);" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Aida Thiam</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav ms-auto"> <!-- Added ms-auto to align to the right -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="abdoulahii/cv">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/abdoulahii/E-portfolio">E-portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="abdoulahii/avis">Avis</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Bienvenue sur mon site personnel</h1>
+    </div>
+
+    <div class="container">
+        <div class="profile-info">
+            <h2>Informations personnelles</h2>
+            <p><strong>Nom :</strong> Aida Thiam</p>
+            <p><strong>Groupe :</strong> A2</p>
+            <p><strong>Adresse :</strong> 41 Rue de l'hopital,42300Roanne</p>
+            <p><strong>Email :</strong> aida.thiam@etu.univ-st-etienne.fr</p>
+            <p><strong>Téléphone :</strong> +33 7 81 20 94 88</p>
+        </div>
+
+        <div class="presentation">
+            <h2>À propos de moi</h2>
+            <p>
+                Bonjour ! Je m'appelle Aida Thiam et je poursuis un BUT en Réseaux et Télécommunications. Je suis actuellement en BUT1,
+                je fais partie du groupe A2 pour mes projets et mes études. Je suis passionnée par le développement web et la technologie en général. 
+                À travers mon travail, je souhaite créer des expériences numériques engageantes qui aident à résoudre des problèmes concrets. 
+                N'hésitez pas à explorer mon site pour en savoir plus sur mon portfolio, mes loisirs et mes projets personnels.
+            </p>  
+        </div>
+
+        <div class="container text-center" style="background-color:rgb(247, 226, 241); border-radius: 10px; padding: 30px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            <h2>Pour en savoir plus</h2>
+            <p>Découvrez plus de photos et d'informations sur mes loisirs, passions et projets !</p>
+            <button id="view-photos-btn" class="btn btn-custom">Voir les photos</button>
+        </div>
+
+    </div>
+
+    <div id="photo-gallery" class="container text-center" style="display: none; margin-top: 40px;">
+        <h2>Mes Loisirs et Passions</h2>
+        <p>Découvrez ici une galerie de photos liées à mes passions et projets.</p>
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="image\cuisine&pâtisserie.jpg" alt="Cuisine&Pâtisserie">
+            </div>
+            <div class="photo-item">
+                <img src="image\mode&style.jpg" alt="Mode&Style">
+            </div>
+            <div class="photo-item">
+                <img src="image\voyage.jpg" alt="Voyage">
+            </div>
+        </div>
+        <a href="javascript:void(0)" id="back-to-home" class="btn btn-back">Retour à l'accueil</a>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Aida Thiam. All rights reserved.</p>
+    </div>
+
+    <script>
+        document.getElementById("view-photos-btn").addEventListener("click", function() {
+            document.querySelector(".container").style.display = "none";
+            document.getElementById("photo-gallery").style.display = "block";
+        });
+
+        document.getElementById("back-to-home").addEventListener("click", function() {
+            document.querySelector(".container").style.display = "block";
+            document.getElementById("photo-gallery").style.display = "none";
+        });
+    </script>
+</body>
 </html>

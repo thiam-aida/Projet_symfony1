@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page des Avis</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color:rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 75%;
+            max-width: 1000px;
+            margin: 60px auto;
+            background-color:rgb(252, 252, 252);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        /* Titre principal */
+        h1 {
+            text-align: center;
+            color:rgb(29, 148, 128);
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color:rgb(30, 121, 113);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        /* Style pour les champs du formulaire */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1.2rem;
+            color:rgb(30, 126, 129);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solidrgb(30, 97, 102);
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            color:rgb(30, 110, 93);
+            background-color: #fce4ec;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+            border-color:rgb(30, 104, 104);
+            outline: none;
+        }
+
+        /* Style pour le bouton */
+        button[type="submit"] {
+            background-color:rgb(30, 134, 129);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color:rgb(30, 127, 131);
+        }
+
+        /* Responsive : pour les petits écrans */
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<link rel="stylesheet" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+<nav class="navbar navbar-expand-lg" style="background-color:rgb(30, 148, 136);" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Aida Thiam</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav ms-auto"> <!-- Added ms-auto to align to the right -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/abdoulahii/cv">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/abdoulahii">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/abdoulahii/E-portfolio">E-portfolio</a>
+                   
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Page des Avis</h1>
+
+        <!-- Formulaire pour ajouter un nouvel avis -->
+        <div class="avis-form">
+            <h3>Ajouter votre avis</h3>
+            <form action="{{ path('app_avis') }}" method="POST">
+                <div class="form-group">
+                    <label for="name">Votre nom</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Votre e-mail</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Votre avis</label>
+                    <textarea id="comment" name="comment" class="form-control" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
