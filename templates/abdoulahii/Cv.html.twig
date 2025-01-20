@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color:rgb(243, 204, 234); /* Light pink background */
+            background-color:rgb(253, 253, 253); /* Light pink background */
         }
         .header {
             background-color:rgb(24, 128, 117); /* Turquoise background */
@@ -81,10 +81,26 @@
         .button:hover {
             background-color:rgb(26, 119, 108); /* Darker turquoise on hover */
         }
+        footer {
+            background-color: rgb(24, 128, 117);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-<link rel="stylesheet" href="https://bootswatch.com/5/litera/bootstrap.min.css">
  <nav class="navbar navbar-expand-lg" style="background-color:rgb(30, 148, 136);" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Aida Thiam</a>
@@ -92,13 +108,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav ms-auto"> <!-- Added ms-auto to align to the right -->
-            
-                    <li class="nav-item">
-                        <a class="nav-link" href="/abdoulahii">Accueil</a>
-                    </li>
+                <ul class="navbar-nav ms-auto"><!-- Added ms-auto to align to the right -->
                     <li class="nav-item">
                         <a class="nav-link" href="/abdoulahii/E-portfolio">E-portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/abdoulahii">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/abdoulahii/avis">Avis</a>
@@ -109,7 +124,7 @@
     </nav>
     <div class="header">
         <h1>AIDA THIAM</h1>
-        <h2> Technicienne Réseaux et Télécommunications</h2>
+        <h2>Technicienne Réseaux et Télécommunications</h2>
     </div>
     <div class="container">
         <div class="contact-info">
@@ -164,7 +179,23 @@
             <p><strong>Français :</strong> Courant</p>
             <p><strong>Anglais :</strong> Niveau intermédiaire</p>
         </div>
+        
+        <!-- Téléchargement du CV -->
+        <div class="section">
+            <h3>Téléchargez mon CV</h3>
+            <p>Vous pouvez télécharger mon CV dans les formats suivants :</p>
+            <a href="path_to_your_cv.pdf" class="button" download="CV_Aida_Thiam.pdf">Télécharger en PDF</a>
+            <br>
+            <a href="path_to_your_cv.docx" class="button" download="CV_Aida_Thiam.docx">Télécharger en DOCX</a>
+        </div>
+
         <a href="mailto:aida.thiam@etu.univ-st-etienne.fr" class="button">Contacter par email</a>
     </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Aida Thiam - Tous droits réservés</p>
+        <p><a href="#">Mentions légales</a> | <a href="#">Conditions d'utilisation</a></p>
+    </footer>
 </body>
 </html>
