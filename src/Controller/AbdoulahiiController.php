@@ -21,6 +21,13 @@ class AbdoulahiiController extends AbstractController
             'controller_name' => 'AbdoulahiiController',
         ]);
     }
+    #[Route('/abdoulahii/images/cuisine&pâtisserie', name: 'app_image ')]
+    public function image(): Response
+    {
+        return $this->render('abdoulahii/images/cuisine&pâtisserie.jpg', [
+            'controller_name' => 'AbdoulahiiController',
+        ]);
+    }
 
     // Route pour le CV
     #[Route('/abdoulahii/cv', name: 'app_cv')]
@@ -49,4 +56,4 @@ class AbdoulahiiController extends AbstractController
     }
     
     
-}
+}  
